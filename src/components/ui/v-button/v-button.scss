@@ -1,0 +1,35 @@
+.btn {
+  border: none;
+  display: flex;
+  padding: 14px 20px;
+  align-items: center;
+  justify-content: center;
+  background: rgb(var(--primary));
+  border-radius: 4px;
+  color: rgb(var(--white));
+  transition: all var(--transition);
+  cursor: pointer;
+  text-decoration: none;
+  @include font(13px, 120%, 600);
+
+  &:focus-visible,
+  &:hover {
+    background: rgb(var(--links));
+    outline: none;
+  }
+
+  &--disabled {
+    pointer-events: none;
+    background: rgb(var(--gray));
+  }
+
+  &--small {
+    background: none;
+    padding: 5px 10px;
+    color: rgb(var(--links));
+
+    &:hover {
+      background: rgba(var(--primary), 0.1);
+    }
+  }
+}

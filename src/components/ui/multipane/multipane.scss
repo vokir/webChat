@@ -1,0 +1,22 @@
+.multipane {
+  display: flex;
+
+  &.layout-h {
+    flex-direction: column;
+  }
+
+  &.layout-v {
+    flex-direction: row;
+  }
+}
+
+.multipane-resizer {
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+
+.multipane > div {
+  position: relative;
+  z-index: 1;
+}

@@ -1,0 +1,23 @@
+.phone {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  &-group {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    &__inputs {
+      display: flex;
+      gap: 10px;
+    }
+  }
+  .input-code {
+    width: 65px;
+    :deep(.input-group__input) {
+      text-align: center;
+    }
+  }
+}
+

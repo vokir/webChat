@@ -1,0 +1,54 @@
+.icon {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  color: rgb(var(--gray));
+  transition: all var(--transition);
+
+  &--rotate {
+    transform: rotate(180deg);
+  }
+}
+
+.not-found {
+  padding: 10px 16px;
+  @include font();
+  color: rgb(var(--white));
+}
+
+.search {
+  margin-top: 20px;
+}
+
+.country-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &__item {
+    cursor: pointer;
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    padding: 10px 16px;
+    transition: all var(--transition);
+
+    &-name {
+      color: rgb(var(--white));
+      @include font(13px, 120%, 600);
+    }
+    &-code {
+      color: rgb(var(--gray));
+      @include font(13px, 120%);
+    }
+
+    &:hover {
+      background: rgba(var(--white), 0.05);
+    }
+
+    &--selected {
+      pointer-events: none;
+      background: rgba(var(--white), 0.05);
+    }
+  }
+}

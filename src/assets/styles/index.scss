@@ -1,0 +1,23 @@
+@import './imports';
+
+* {
+  box-sizing: border-box;
+  font-family: 'OpenSans', sans-serif;
+}
+
+body,
+html,
+#app {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+}
+
+.app {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background: rgb(var(--black));
+}

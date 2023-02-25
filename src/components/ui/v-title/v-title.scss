@@ -1,0 +1,27 @@
+.container-title {
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+
+  &--left {
+    text-align: left;
+  }
+
+  &--center {
+    text-align: center;
+  }
+
+  &--right {
+    text-align: right;
+  }
+}
+
+.title {
+  color: rgb(var(--white));
+  @include font(25px, 120%, 600)
+}
+
+.description {
+  @include font();
+  color: rgb(var(--gray));
+}

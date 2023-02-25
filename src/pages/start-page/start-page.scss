@@ -1,0 +1,16 @@
+.start-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 210px;
+  background: rgba(var(--primary));
+}
+.start-block {
+  height: calc(100% - 210px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 300px;
+  margin: 0 auto;
+  gap: 40px;
+}

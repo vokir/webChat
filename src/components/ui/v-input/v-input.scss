@@ -1,0 +1,75 @@
+.input-group {
+  position: relative;
+  max-width: 300px;
+  width: 100%;
+
+  &__input {
+    width: 100%;
+    padding: 8px;
+    display: block;
+    border: none;
+    border-bottom: 1px solid rgba(var(--white), 0.1);
+    color: rgb(var(--white));
+    background: none;
+    @include font();
+
+    &:focus-visible {
+      outline: none;
+    }
+
+    &:focus-visible ~ .input-group__bar:before,
+    &:focus-visible ~ .input-group__bar:after {
+      width: 50%;
+    }
+
+    &::placeholder {
+      color: rgb(var(--gray));
+      @include font();
+    }
+
+    &--background {
+      border: none;
+      background: rgba(var(--white), 0.1);
+      border-radius: 4px;
+
+      &:focus-visible ~ .input-group__bar:before,
+      &:focus-visible ~ .input-group__bar:after {
+        width: 0;
+      }
+    }
+
+    &--error {
+      border-bottom: 1px solid rgb(var(--error));
+
+      & ~ .input-group__bar:before,
+      & ~ .input-group__bar:after {
+        width: 50%;
+        background: rgb(var(--error));
+      }
+    }
+  }
+
+  &__bar {
+    position: relative;
+    display: block;
+
+    &::after,
+    &::before {
+      content: '';
+      height: 2px;
+      width: 0;
+      bottom: 0;
+      position: absolute;
+      background: rgb(var(--primary));
+      transition: all var(--transition);
+    }
+
+    &::before {
+      left: 50%;
+    }
+
+    &::after {
+      right: 50%;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.main-layout {
+  width: 100%;
+  height: 100%;
+
+  &__sidebar,
+  &__content {
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__sidebar {
+    min-width: 260px;
+    max-width: 560px;
+    width: 360px;
+  }
+
+  &__content {
+    min-width: 420px;
+    flex-grow: 1;
+    //background: linear-gradient(0deg, rgba(var(--black-transparent)), rgba(var(--black-transparent))), url(./src/app/assets/images/chatBackground2.png);
+    border-width: 0 1px;
+    border-style: solid;
+    border-color: #000000;
+  }
+
+  &__info {
+    width: 390px;
+  }
+}
